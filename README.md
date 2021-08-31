@@ -14,11 +14,11 @@ This is our main configuration folder. This is where we store configuration sett
 #### `.brev/setup.sh`
 This is the main configuration file that runs on your linux machine, directly after we provision it and before your project is cloned.
 
-You can pre-download software and depedencies that are needed for your service to run (anything that you would globally install on your computer just for this project). The working directory when the file is running is the /home/brev/PROJECT_FOLDER_NAME.
+You can pre-download software and depedencies that are needed for your service to run (anything that you would globally install on your computer just for this project). The working directory when the file is running is `/home/brev/<PROJECT_FOLDER_NAME>`.
 
 Careful not to place user settings in here (like VSCode extensions or settings), and instead place that in your user `.brev`. This way different versions of your software will not conflict, and others can clone your environment with their user settings.
 
-If you need help debugging your setup file, a log file is auto-created when this file runs. It is located at ./.brev/logs/setup.log. We highly recommend echo-ing statements into this file when installing new software to know where errors might be located.
+If you need help debugging your setup file, a log file is auto-created when this file runs. It is located at `./.brev/logs/setup.log`. We highly recommend echo-ing statements into this file when installing new software to know where errors might be located.
 
 #### `.brev/ports.yaml`
 Here we can specify which ports you want publicly accessible. Currently by default any connection to your project is password protected. Although this is secure, it prevents testing routes, connecting different services (like a backend and frontend), and publicly sharing your project.
