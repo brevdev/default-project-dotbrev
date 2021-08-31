@@ -36,6 +36,3 @@
 # echo "export PATH=\$PATH:/usr/local/go/bin" | sudo tee -a ~/.zshrc
 # source ~/.zshrc
 # rm go1.16.7.linux-amd64.tar.gz
-
-##### Install dependencies #####
-# npm install
