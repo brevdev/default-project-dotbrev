@@ -12,19 +12,19 @@
 ####################################################################################
 
 ##### Yarn #####
-# echo "##### Yarn #####" >> ./.brev/logs/setup.log
+# (echo ""; echo "##### Yarn #####"; echo "";) >> ./.brev/logs/setup.log
 # curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add
 # echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 # sudo apt update
 # sudo apt install -y yarn
 
 ##### Node v14.x + npm #####
-# echo "##### Node v14.x + npm #####" >> ./.brev/logs/setup.log
+# (echo ""; echo "##### Node v14.x + npm #####"; echo "";) >> ./.brev/logs/setup.log
 # curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 # sudo apt-get install -y nodejs
 
 ##### Python + Pip + Poetry #####
-# echo "##### Python + Pip + Poetry #####" >> ./.brev/logs/setup.log
+# (echo ""; echo "##### Python + Pip + Poetry #####"; echo "";) >> ./.brev/logs/setup.log
 # sudo apt-get install -y python3-distutils
 # sudo apt-get install -y python3-apt
 # curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
@@ -34,7 +34,7 @@
 # source $HOME/.poetry/env
 
 ##### Golang v16x #####
-# echo "##### Golang v16x #####" >> ./.brev/logs/setup.log
+# (echo ""; echo "##### Golang v16x #####"; echo "";) >> ./.brev/logs/setup.log
 # wget https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
 # sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.16.7.linux-amd64.tar.gz
 # echo "" | sudo tee -a ~/.bashrc
