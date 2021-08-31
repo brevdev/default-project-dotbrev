@@ -12,7 +12,7 @@ If you want to adjust these for more custom setups, here's more information on h
 This is our main configuration folder. This is where we store configuration settings everytime you create or join a new project. There is also a user specific dot brev with the same structure, which holds software that you can download for each project.
 
 #### `.brev/setup.sh`
-This is the main project configuration file that runs on your linux machine, directly after we provision it and before your project is cloned.
+This is the main configuration file that runs on your linux machine, directly after we provision it and before your project is cloned.
 
 You can pre-download software and depedencies that are needed for your service to run (anything that you would globally install on your computer just for this project). The working directory when the file is running is the /home/brev/PROJECT_FOLDER_NAME.
 
