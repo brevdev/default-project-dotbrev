@@ -2,6 +2,9 @@
 
 ################################################################################
 ##### Specify software and dependencies that are required for this project #####
+#####                                                                      #####
+##### Note: the working directory is /home/brev/PROJECT_FOLDER_NAME.       #####
+##### Execution of this file happens at this level.                        #####
 ################################################################################
 
 ##### Yarn #####
@@ -33,3 +36,6 @@
 # echo "export PATH=\$PATH:/usr/local/go/bin" | sudo tee -a ~/.zshrc
 # source ~/.zshrc
 # rm go1.16.7.linux-amd64.tar.gz
+
+##### Install dependencies #####
+# npm install
