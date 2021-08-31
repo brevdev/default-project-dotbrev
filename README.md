@@ -9,12 +9,12 @@ This template is automatically added inside each of your projects created in Bre
 If you want to adjust these for more custom setups, here's more information on how this configuration repository is structured.
 
 #### `.brev`
-This is our main configuration folder. This is run everytime you create or join a new project. There is also a project specific dot brev with the same structure, which holds software that you can download for each project.
+This is our main configuration folder. This is where we store configuration settings everytime you create or join a new project. There is also a user specific dot brev with the same structure, which holds software that you can download for each project.
 
 #### `.brev/setup.sh`
-This is the main file that runs on your linux machine, directly after we provision it and before your project is cloned.
+This is the main project configuration file that runs on your linux machine, directly after we provision it and before your project is cloned.
 
-You can pre-download software and depedencies that are needed for your service to run. Anything that you would globally install on your computer.
+You can pre-download software and depedencies that are needed for your service to run (anything that you would globally install on your computer just for this project). The working directory when the file is running is the /home/brev/PROJECT_FOLDER_NAME.
 
 Careful not to place user settings in here (like VSCode extensions or settings), and instead place that in your user `.brev`. This way different versions of your software will not conflict, and others can clone your environment with their user settings.
 
