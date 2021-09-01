@@ -15,8 +15,8 @@
 # (echo ""; echo "##### Yarn #####"; echo "";) >> ./.brev/logs/setup.log
 # curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add
 # echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-# sudo apt update
-# sudo apt install -y yarn
+# sudo apt update >> ./.brev/logs/setup.log
+# sudo apt install -y yarn >> ./.brev/logs/setup.log
 
 ##### Homebrew #####
 # (echo ""; echo "##### Homebrew #####"; echo "";) >> ./.brev/logs/setup.log
