@@ -18,6 +18,13 @@
 # sudo apt update
 # sudo apt install -y yarn
 
+##### Homebrew #####
+# (echo ""; echo "##### Homebrew #####"; echo "";) >> ./.brev/logs/setup.log
+# curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash - >> ./.brev/logs/setup.log
+# echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.bash_profile
+# echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.zshrc
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 ##### Node v14.x + npm #####
 # (echo ""; echo "##### Node v14.x + npm #####"; echo "";) >> ./.brev/logs/setup.log
 # curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
