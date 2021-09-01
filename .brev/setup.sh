@@ -5,7 +5,8 @@
 #####                                                                          #####
 ##### Note:                                                                    ##### 
 ##### (1) A log file is auto-created when this file runs. If you want to write #####
-##### to it, the relative path is ./.brev/logs/setup.log                       #####
+##### to it, the relative path is ./.brev/logs/setup.log. By default, all      #####
+##### stderr and stdout from this file are sent there.                         #####
 #####                                                                          #####
 ##### (2) The working directory is /home/brev/<PROJECT_FOLDER_NAME>. Execution #####
 ##### of this file happens at this level.                                      #####
