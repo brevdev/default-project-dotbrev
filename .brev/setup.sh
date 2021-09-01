@@ -27,8 +27,8 @@
 
 ##### Node v14.x + npm #####
 # (echo ""; echo "##### Node v14.x + npm #####"; echo "";) >> ./.brev/logs/setup.log
-# curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-# sudo apt-get install -y nodejs
+# curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash - >> ./.brev/logs/setup.log
+# sudo apt-get install -y nodejs >> ./.brev/logs/setup.log
 
 ##### Python + Pip + Poetry #####
 # (echo ""; echo "##### Python + Pip + Poetry #####"; echo "";) >> ./.brev/logs/setup.log
