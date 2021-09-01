@@ -15,20 +15,20 @@
 # (echo ""; echo "##### Yarn #####"; echo "";) >> ./.brev/logs/setup.log
 # curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add
 # echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-# sudo apt update >> ./.brev/logs/setup.log
-# sudo apt install -y yarn >> ./.brev/logs/setup.log
+# sudo apt update
+# sudo apt install -y yarn
 
 ##### Homebrew #####
 # (echo ""; echo "##### Homebrew #####"; echo "";) >> ./.brev/logs/setup.log
-# curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash - >> ./.brev/logs/setup.log
+# curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash -
 # echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.bash_profile
 # echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.zshrc
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 ##### Node v14.x + npm #####
 # (echo ""; echo "##### Node v14.x + npm #####"; echo "";) >> ./.brev/logs/setup.log
-# curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash - >> ./.brev/logs/setup.log
-# sudo apt-get install -y nodejs >> ./.brev/logs/setup.log
+# curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+# sudo apt-get install -y nodejs
 
 ##### Python + Pip + Poetry #####
 # (echo ""; echo "##### Python + Pip + Poetry #####"; echo "";) >> ./.brev/logs/setup.log
