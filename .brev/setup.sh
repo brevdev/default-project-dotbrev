@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 ####################################################################################
 ##### Specify software and dependencies that are required for this project     #####
 #####                                                                          #####
