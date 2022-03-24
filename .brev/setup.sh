@@ -29,7 +29,7 @@ set -euo pipefail
 # sudo apt install ca-certificates
 # curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 # sudo apt-get install -y nodejs
-# # Install npm packages globally without sudo
+# # install npm packages globally without sudo
 # if [ ! -d "${HOME}/.npm-packages" ]
 # then
 # mkdir "${HOME}/.npm-packages"
