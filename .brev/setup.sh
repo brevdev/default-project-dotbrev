@@ -2,6 +2,16 @@
 
 set -euo pipefail
 
+if [ ! -f "./.brev/logs/setup.log" ]
+then
+mkdir "./.brev/logs"
+touch "./.brev/logs/setup.log"
+else
+rm -rf "./.brev/logs"
+mkdir "./.brev/logs"
+touch "./.brev/logs/setup.log"
+fi
+
 ####################################################################################
 ##### Specify software and dependencies that are required for this project     #####
 #####                                                                          #####
@@ -11,21 +21,21 @@ set -euo pipefail
 ####################################################################################
 
 ##### Yarn #####
-# (echo ""; echo "##### Yarn #####"; echo "";)
+# (echo ""; echo "##### Yarn #####"; echo "";) | tee -a "./.brev/logs/setup.log"
 # curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add
 # echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 # sudo apt update
 # sudo apt install -y yarn
 
 ##### Homebrew #####
-# (echo ""; echo "##### Homebrew #####"; echo "";)
+# (echo ""; echo "##### Homebrew #####"; echo "";) | tee -a "./.brev/logs/setup.log"
 # curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash -
 # echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.bash_profile
 # echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.zshrc
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 ##### Node v14.x + npm #####
-# (echo ""; echo "##### Node v14.x + npm #####"; echo "";)
+# (echo ""; echo "##### Node v14.x + npm #####"; echo "";) | tee -a "./.brev/logs/setup.log"
 # sudo apt install ca-certificates
 # curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 # sudo apt-get install -y nodejs
@@ -46,7 +56,7 @@ set -euo pipefail
 # fi
 
 ##### Python + Pip + Poetry #####
-# (echo ""; echo "##### Python + Pip + Poetry #####"; echo "";)
+# (echo ""; echo "##### Python + Pip + Poetry #####"; echo "";) | tee -a "./.brev/logs/setup.log"
 # sudo apt-get install -y python3-distutils
 # sudo apt-get install -y python3-apt
 # curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
@@ -56,7 +66,7 @@ set -euo pipefail
 # source $HOME/.poetry/env
 
 ##### Golang v16x #####
-# (echo ""; echo "##### Golang v16x #####"; echo "";)
+# (echo ""; echo "##### Golang v16x #####"; echo "";) | tee -a "./.brev/logs/setup.log"
 # wget https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
 # sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.16.7.linux-amd64.tar.gz
 # echo "" | sudo tee -a ~/.bashrc
@@ -68,5 +78,5 @@ set -euo pipefail
 # rm go1.16.7.linux-amd64.tar.gz
 
 ##### Custom commands #####
-# (echo ""; echo "##### Custom commands #####"; echo "";)
+# (echo ""; echo "##### Custom commands #####"; echo "";) | tee -a "./.brev/logs/setup.log"
 # npm install
