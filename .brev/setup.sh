@@ -4,10 +4,12 @@ set -euo pipefail
 
 if [ ! -f "./.brev/logs/setup.log" ]
 then
+(echo ""; echo "##### CREATING LOG FILE #####"; echo "";)
 mkdir "./.brev/logs"
 touch "./.brev/logs/setup.log"
 sudo chown -R 1000:1000 .brev/logs
 else
+(echo ""; echo "##### CREATING NEW LOG FILE #####"; echo "";)
 sudo chown -R 1000:1000 .brev/logs
 rm -rf "./.brev/logs"
 mkdir "./.brev/logs"
