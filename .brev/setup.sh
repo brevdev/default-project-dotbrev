@@ -6,7 +6,9 @@ if [ ! -f "./.brev/logs/setup.log" ]
 then
 mkdir "./.brev/logs"
 touch "./.brev/logs/setup.log"
+sudo chown -R 1000:1000 .brev/logs
 else
+sudo chown -R 1000:1000 .brev/logs
 rm -rf "./.brev/logs"
 mkdir "./.brev/logs"
 touch "./.brev/logs/setup.log"
