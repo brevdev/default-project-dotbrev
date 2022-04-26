@@ -2,20 +2,6 @@
 
 set -eo pipefail
 
-if [ ! -f "./.brev/logs/setup.log" ]
-then
-(echo ""; echo "##### CREATING LOG FILE #####"; echo "";)
-mkdir "./.brev/logs"
-touch "./.brev/logs/setup.log"
-sudo chown -R 1000:1000 .brev/logs
-else
-(echo ""; echo "##### CREATING NEW LOG FILE #####"; echo "";)
-sudo chown -R 1000:1000 .brev/logs
-rm -rf "./.brev/logs"
-mkdir "./.brev/logs"
-touch "./.brev/logs/setup.log"
-fi
-
 ####################################################################################
 ##### Specify software and dependencies that are required for this project     #####
 #####                                                                          #####
@@ -25,21 +11,21 @@ fi
 ####################################################################################
 
 ##### Yarn #####
-# (echo ""; echo "##### Yarn #####"; echo "";) | tee -a "./.brev/logs/setup.log"
+# (echo ""; echo "##### Yarn #####"; echo "";)
 # curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add
 # echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 # sudo apt update
 # sudo apt install -y yarn
 
 ##### Homebrew #####
-# (echo ""; echo "##### Homebrew #####"; echo "";) | tee -a "./.brev/logs/setup.log"
+# (echo ""; echo "##### Homebrew #####"; echo "";)
 # curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash -
 # echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.bash_profile
 # echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.zshrc
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 ##### Node v14.x + npm #####
-# (echo ""; echo "##### Node v14.x + npm #####"; echo "";) | tee -a "./.brev/logs/setup.log"
+# (echo ""; echo "##### Node v14.x + npm #####"; echo "";)
 # sudo apt install ca-certificates
 # curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 # sudo apt-get install -y nodejs
@@ -60,7 +46,7 @@ fi
 # fi
 
 ##### Python + Pip + Poetry #####
-# (echo ""; echo "##### Python + Pip + Poetry #####"; echo "";) | tee -a "./.brev/logs/setup.log"
+# (echo ""; echo "##### Python + Pip + Poetry #####"; echo "";)
 # sudo apt-get install -y python3-distutils
 # sudo apt-get install -y python3-apt
 # curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
@@ -70,7 +56,7 @@ fi
 # source $HOME/.poetry/env
 
 ##### Golang v16x #####
-# (echo ""; echo "##### Golang v16x #####"; echo "";) | tee -a "./.brev/logs/setup.log"
+# (echo ""; echo "##### Golang v16x #####"; echo "";)
 # wget https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
 # sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.16.7.linux-amd64.tar.gz
 # echo "" | sudo tee -a ~/.bashrc
@@ -82,5 +68,5 @@ fi
 # rm go1.16.7.linux-amd64.tar.gz
 
 ##### Custom commands #####
-# (echo ""; echo "##### Custom commands #####"; echo "";) | tee -a "./.brev/logs/setup.log"
+# (echo ""; echo "##### Custom commands #####"; echo "";)
 # npm install
