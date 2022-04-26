@@ -1,4 +1,4 @@
-# Brev Setup
+# Brev.dev Project Configuration
 
 Whenever you create or join a project, your project `.brev` directory runs, automating the setup of your project and controlling your machine.
 
